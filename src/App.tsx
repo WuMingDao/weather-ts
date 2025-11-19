@@ -1,22 +1,18 @@
-import Day from "./components/Day";
-import Loading from "./ui/Loading";
-import { useCurrentWeather } from "./hooks/useCurrentWeather";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { DevTools } from "jotai-devtools";
+import { RouterProvider } from "react-router";
+import { Toaster } from "sonner";
+import { router } from "./routers/Router";
+
+const queryClient = new QueryClient();
 
 function App() {
-  const { isLoading } = useCurrentWeather();
-
   return (
-    <>
-      <div className="grid place-items-center h-screen">
-        {isLoading && <Loading />}
-        {!isLoading && (
-          <div>
-            <Day />
-            <button className="btn btn-info">Get Start</button>
-          </div>
-        )}
-      </div>
-    </>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+      <DevTools />
+      <Toaster position="top-center" />
+    </QueryClientProvider>
   );
 }
 export default App;
