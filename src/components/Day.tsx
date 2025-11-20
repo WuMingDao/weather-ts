@@ -8,14 +8,14 @@ function Day() {
   const weatherIconUrl = `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
   return (
-    <li className="day">
+    <div className="flex flex-col items-center my-10">
       <img src={weatherIconUrl} />
-      <p>Today</p>
+      <div>Today</div>
       <p>
         {Math.floor(temperature.min)}&deg; &mdash; {Math.ceil(temperature.max)}
         &deg;
       </p>
-    </li>
+    </div>
   );
 }
 export default Day;

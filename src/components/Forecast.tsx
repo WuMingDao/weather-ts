@@ -11,7 +11,7 @@ function Forecast() {
   const forecastList = useAtomValue(forecastAtom);
 
   return (
-    <div className="grid place-items-center h-screen">
+    <div className="grid place-items-center my-40">
       {isLoading && <Loading />}
       {!isLoading && (
         <ul className="list bg-base-100 rounded-box">
@@ -43,7 +43,6 @@ function Forecast() {
           ))}
         </ul>
       )}
-      ;
     </div>
   );
 }

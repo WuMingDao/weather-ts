@@ -55,7 +55,7 @@ function NavBar() {
             </ul>
           </div>
           <a className="btn btn-ghost text-xl" onClick={() => navigate("/")}>
-            daisyUI
+            Weather
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">

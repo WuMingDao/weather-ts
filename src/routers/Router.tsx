@@ -15,7 +15,10 @@ export const router = createBrowserRouter([
       },
       {
         path: "forecast",
-        Component: Forecast,
+        lazy: async () => {
+          const module = await import("../components/Forecast");
+          return { Component: module.default };
+        },
       },
     ],
   },
