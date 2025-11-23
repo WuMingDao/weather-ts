@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import AppLayout from "../ui/AppLayout";
-import Home from "../components/Home";
-import Forecast from "../components/Forecast";
+import Home from "../components/home/Home";
+// import Forecast from "../components/forecast/Forecast";
 import NotFound from "../ui/NotFound";
 
 export const router = createBrowserRouter([
@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
       {
         path: "forecast",
         lazy: async () => {
-          const module = await import("../components/Forecast");
+          const module = await import("../components/forecast/Forecast");
           return { Component: module.default };
         },
       },

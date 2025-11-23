@@ -20,18 +20,17 @@ export function useForecast() {
 
     // console.log(ForecastData);
 
-    const forecastList = ForecastData.list
-      .map((item: any) => {
-        const weather = item.weather[0];
+    const forecastList = ForecastData.map((item: any) => {
+      const weather = item.weather[0];
 
-        return {
-          weatherIcon: weather.icon,
-          weather: weather.main,
-          min: item.main.temp_min,
-          max: item.main.temp_max,
-          data: item.dt_txt,
-        };
-      })
+      return {
+        weatherIcon: weather.icon,
+        weather: weather.main,
+        min: item.main.temp_min,
+        max: item.main.temp_max,
+        data: item.dt_txt,
+      };
+    })
       .filter((item: weather) => item.data.includes("12:00:00"))
       .filter((item: weather) => {
         const currDate = new Date().getDate();
@@ -39,8 +38,6 @@ export function useForecast() {
 
         return currDate !== weatherDate;
       });
-
-    // console.log(forecastList);
 
     setForecast(forecastList);
   }

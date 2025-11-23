@@ -19,6 +19,8 @@ export function useCurrentWeather() {
       position.longitude
     );
 
+    console.log(weatherData);
+
     setTemperature({
       min: weatherData.main.temp_min,
       max: weatherData.main.temp_max,
@@ -32,7 +34,7 @@ export function useCurrentWeather() {
     onSuccess: () => {
       toast.success("Data loaded");
 
-      toast.dismiss();
+      toast.dismiss(100);
     },
     onError: (error) => {
       toast.error(error.message);

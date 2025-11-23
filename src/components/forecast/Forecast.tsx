@@ -1,9 +1,9 @@
 import { useAtomValue } from "jotai";
-import { forecastAtom } from "../stores/weatherAtom";
-import { useForecast } from "../hooks/useForecast";
-import type { weather } from "../types/weather";
-import { formatDay } from "../utils/formatDayHelper";
-import Loading from "../ui/Loading";
+import { forecastAtom } from "../../stores/weatherAtom";
+import { useForecast } from "../../hooks/useForecast";
+import type { weather } from "../../types/weather";
+import { formatDay } from "../../utils/formatDayHelper";
+import Loading from "../../ui/Loading";
 
 function Forecast() {
   const { isLoading } = useForecast();

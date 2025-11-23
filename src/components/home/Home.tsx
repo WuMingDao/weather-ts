@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
-import { useCurrentWeather } from "../hooks/useCurrentWeather";
-import Loading from "../ui/Loading";
+import { useCurrentWeather } from "../../hooks/useCurrentWeather";
+import Loading from "../../ui/Loading";
 import Day from "./Day";
 
 function Home() {

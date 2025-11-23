@@ -1,5 +1,5 @@
 import { useAtomValue } from "jotai";
-import { temperatureAtom, weatherIconAtom } from "../stores/weatherAtom";
+import { temperatureAtom, weatherIconAtom } from "../../stores/weatherAtom";
 
 function Day() {
   const temperature = useAtomValue(temperatureAtom);

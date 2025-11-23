@@ -1,7 +1,7 @@
 import { atom } from "jotai";
-import type { weather } from "../types/weather";
+import type { temperature, weather } from "../types/weather";
 
-export const temperatureAtom = atom({
+export const temperatureAtom = atom<temperature>({
   min: 0,
   max: 0,
 });
