@@ -1,8 +1,8 @@
 function Loading() {
-	return (
-		<div className="">
-			<span className="loading loading-spinner loading-xl"></span>
-		</div>
-	);
+  return (
+    <output>
+      <span className="loading loading-spinner loading-xl"></span>
+    </output>
+  );
 }
 export default Loading;
