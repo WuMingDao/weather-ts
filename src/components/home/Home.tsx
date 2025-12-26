@@ -4,27 +4,26 @@ import Loading from "../../ui/Loading";
 import Day from "./Day";
 
 function Home() {
-  const navigate = useNavigate();
+	const navigate = useNavigate();
 
-  const { isLoading } = useCurrentWeather();
+	const { isLoading } = useCurrentWeather();
 
-  return (
-    <>
-      <div className="grid place-items-center my-40">
-        {isLoading && <Loading />}
-        {!isLoading && (
-          <div>
-            <Day />
-            <button
-              className="btn btn-info"
-              onClick={() => navigate("/forecast")}
-            >
-              Get Start
-            </button>
-          </div>
-        )}
-      </div>
-    </>
-  );
+	return (
+		<div className="grid place-items-center my-40">
+			{isLoading && <Loading />}
+			{!isLoading && (
+				<div>
+					<Day />
+					<button
+						type="button"
+						className="btn btn-info"
+						onClick={() => navigate("/forecast")}
+					>
+						Get Start
+					</button>
+				</div>
+			)}
+		</div>
+	);
 }
 export default Home;

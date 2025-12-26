@@ -7,12 +7,12 @@ import { router } from "./routers/Router";
 const queryClient = new QueryClient();
 
 function App() {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-      <DevTools />
-      <Toaster position="top-center" />
-    </QueryClientProvider>
-  );
+	return (
+		<QueryClientProvider client={queryClient}>
+			<RouterProvider router={router} />
+			<DevTools />
+			<Toaster position="top-center" />
+		</QueryClientProvider>
+	);
 }
 export default App;

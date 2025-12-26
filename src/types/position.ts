@@ -1,4 +1,4 @@
 export type Position = {
-  latitude: number;
-  longitude: number;
+	latitude: number;
+	longitude: number;
 };
